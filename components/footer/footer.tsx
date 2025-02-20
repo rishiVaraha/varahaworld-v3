@@ -5,7 +5,7 @@ import { ReactComponent as ArrowForward } from "@/public/icons/arrow-forward.svg
 import { ReactComponent as Logo } from "@/public/icons/logo.svg";
 import { SuccessToast, ErrorToast } from "@/components/custom/toast";
 import { BASE_URL } from "@/constant/site";
-
+import { useIsMobile } from "@/hooks/use-mobile";
 import AnimatedButton from "@/components/custom/animated-button";
 import Loader from "@/components/custom/loader";
 
@@ -14,6 +14,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 export default function Footer() {
+  const isMobile = useIsMobile();
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [email, setEmail] = useState<string>("");
   const pathnames = usePathname();
@@ -58,9 +59,7 @@ export default function Footer() {
     <footer
       className={cn(
         "sticky -bottom-full z-10 mt-4 md:mt-6 lg:-bottom-1/2 lg:mt-12",
-        pathnames?.includes("contact") && window.innerWidth < 1024
-          ? "hidden"
-          : "block"
+        pathnames?.includes("contact") && isMobile ? "hidden" : "block"
       )}
     >
       {/* Blue Section */}

@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      className={`${PlayfairDisplay.variable} ${PlayfairDisplayItalic.variable} ${sans.variable} antialiased`}
+      className={`${PlayfairDisplay.variable} ${PlayfairDisplayItalic.variable} ${sans.variable} antialiased scroll-smooth`}
       lang="en"
     >
       <body className="font-sans">
