@@ -23,8 +23,9 @@ export default function Hero() {
               </h1>
               <div className="relative inline-block">
                 <h1>3D Technology</h1>
+
                 <Image
-                  className="absolute bottom-1 ml-0 w-fit px-0 sm:ml-2 md:bottom-2 md:px-4 lg:ml-6 lg:px-0"
+                  className="w-fit px-0 sm:ml-2 md:bottom-2 md:px-4 lg:ml-6 lg:px-0"
                   src={Underline}
                   alt="red underline"
                   layout="fill"
@@ -49,13 +50,14 @@ export default function Hero() {
         <AnimatedElement direction="right">
           <div className="relative hidden h-[600px] w-[400px] flex-col gap-4 lg:flex">
             <div className="to-gray-9000 bg-red-40000 absolute left-1/2 top-24 -z-0 size-72 -translate-x-1/2 -translate-y-1/3 transform rounded-full bg-gradient-radial from-orange-400 blur-xl" />
-            <Image
-              src={Salabhanjika}
-              alt="Hero Image"
-              width={400}
-              height={680}
-              className="z-10 object-contain"
-            />
+            <div className="relative z-10 h-[680px] w-[400px]">
+              <Image
+                src={Salabhanjika}
+                alt="Hero Image"
+                layout="fill"
+                className="size-full object-contain"
+              />
+            </div>
           </div>
         </AnimatedElement>
 
@@ -64,8 +66,13 @@ export default function Hero() {
       </div>
 
       <AnimatedElement direction="zoom-in" animationDuration={0.3}>
-        <div className="relative mb-4 flex w-full flex-col gap-4 sm:mb-6 md:mb-10 lg:mb-20">
-          <Image src={VideoTemplate} alt="" layout="fill" />
+        <div className="relative w-[1460px] h-[570px] mx-auto">
+          <Image
+            src={VideoTemplate}
+            alt=""
+            layout="fill"
+            className="size-full object-contain"
+          />
         </div>
       </AnimatedElement>
     </Wrapper>

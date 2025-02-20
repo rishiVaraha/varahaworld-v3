@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Playfair_Display, Open_Sans } from "next/font/google";
 import Footer from "@/components/footer/footer";
+import Header from "@/components/header/header";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const Playfair = Playfair_Display({
+  variable: "--font-PlayfairDisplay",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const OpenSans = Open_Sans({
+  variable: "--font-OpenSans",
   subsets: ["latin"],
 });
 
@@ -24,10 +25,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html className="scroll-smooth" lang="en">
+      <body className={`${Playfair.variable} ${OpenSans.variable} antialiased`}>
+        <Header />
         {children}
         <Footer />
       </body>
