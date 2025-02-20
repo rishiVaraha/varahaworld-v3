@@ -1,18 +1,8 @@
 import type { Metadata } from "next";
+import { PlayfairDisplay, PlayfairDisplayItalic, sans } from "@/lib/font";
 import "./globals.css";
-import { Playfair_Display, Open_Sans } from "next/font/google";
 import Footer from "@/components/footer/footer";
 import Header from "@/components/header/header";
-
-const Playfair = Playfair_Display({
-  variable: "--font-PlayfairDisplay",
-  subsets: ["latin"],
-});
-
-const OpenSans = Open_Sans({
-  variable: "--font-OpenSans",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,8 +15,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className="scroll-smooth" lang="en">
-      <body className={`${Playfair.variable} ${OpenSans.variable} antialiased`}>
+    <html
+      className={`${PlayfairDisplay.variable} ${PlayfairDisplayItalic.variable} ${sans.variable} antialiased`}
+      lang="en"
+    >
+      <body className="font-sans">
         <Header />
         {children}
         <Footer />

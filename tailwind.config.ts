@@ -1,3 +1,5 @@
+// eslint-disable-next-line import/no-anonymous-default-export
+import { p } from "framer-motion/client";
 import type { Config } from "tailwindcss";
 
 export default {
@@ -9,8 +11,9 @@ export default {
   ],
   theme: {
     fontFamily: {
-      sans: ["Open Sans", "sans-serif"],
-      playfair: ["Playfair Display", "serif"],
+      sans: ["var(--font-sans)", "sans-serif"],
+      playfair: ["var(--font-playfair)", "serif"],
+      playfairitalic: ["var(--font-playfairitalic)", "serif"],
     },
     container: {
       center: true,
@@ -73,8 +76,13 @@ export default {
     },
   },
   plugins: [
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
     require("tailwindcss-animate"),
-    function ({ addVariant }) {
+    function ({
+      addVariant,
+    }: {
+      addVariant: (name: string, css: string) => void;
+    }) {
       addVariant("child", "& > *");
       addVariant("child-hover", "& > *:hover");
     },

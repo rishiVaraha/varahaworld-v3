@@ -68,10 +68,10 @@ export default function Footer() {
         <div className="relative flex h-full flex-col items-center justify-between gap-4 px-4">
           {/* Header Text */}
           <div className="flex max-w-fit flex-col items-center justify-center gap-6 pb-5 pt-10 text-center text-[24px] md:text-[35px] lg:text-[45px]">
-            <h1 className="font-playfair italic text-foreground/80">
+            <h1 className="font-playfairitalic  text-foreground/80">
               Participate in this monumental mission by{" "}
               <br className="hidden md:block" />
-              <span className="font-bold not-italic text-foreground">
+              <span className="font-bold font-playfair text-foreground">
                 {" "}
                 Joining, Collaborating, Partnering,
               </span>{" "}

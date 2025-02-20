@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 
 interface WrapperProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
+  // eslint-disable-next-line
   [x: string]: any;
 }
 

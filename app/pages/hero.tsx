@@ -3,12 +3,12 @@ import Wrapper from "@/components/wrapper";
 import { ReactComponent as ArrowForward } from "@/public/icons/arrow-forward.svg";
 import AnimatedButton from "@/components/custom/animated-button";
 
-import Underline from "@/public/icons/underline.svg?img";
+// import Underline from "@/public/icons/underline.svg?img";
 import Salabhanjika from "@/public/images/salabhanjika.webp";
 import VideoTemplate from "@/public/images/Varaha_header02.webp";
 
 import { AnimatedElement } from "@/components/animated-element";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 
 export default function Hero() {
@@ -24,12 +24,12 @@ export default function Hero() {
               <div className="relative inline-block">
                 <h1>3D Technology</h1>
 
-                <Image
+                {/* <Image
                   className="w-fit px-0 sm:ml-2 md:bottom-2 md:px-4 lg:ml-6 lg:px-0"
                   src={Underline}
                   alt="red underline"
                   layout="fill"
-                />
+                /> */}
               </div>
             </div>
             <p className="max-w-[800px] text-foreground/90 lg:text-xl">

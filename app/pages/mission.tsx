@@ -1,9 +1,9 @@
 import Wrapper from "@/components/wrapper";
 
-import Underline from "@/public/icons/underline.svg?img";
+// import Underline from "@/public/icons/underline.svg?img";
 import Trails from "@/public/images/trails.png";
 
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 export default function Mission() {
   return (
@@ -25,12 +25,12 @@ export default function Mission() {
           </h1>{" "}
           <div className="relative inline-block">
             <h1>Digital Preservation</h1>
-            <Image
+            {/* <Image
               className="absolute bottom-0"
               src={Underline}
               alt="red underline"
               layout="fill"
-            />
+            /> */}
           </div>
         </div>
       </div>
