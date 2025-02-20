@@ -15,7 +15,7 @@ const AnimatedButton: React.ForwardRefExoticComponent<
     <button ref={ref} className="group relative z-10" {...props}>
       <span
         className={cn(
-          "group flex items-center justify-center gap-2 rounded-lg border border-primary bg-primary text-sm uppercase text-primary-foreground",
+          "group flex items-center justify-center gap-2  border border-primary bg-primary text-sm uppercase text-primary-foreground",
           className
         )}
       >
@@ -23,7 +23,7 @@ const AnimatedButton: React.ForwardRefExoticComponent<
       </span>
       <span
         className={cn(
-          "absolute top-0 flex items-center justify-center gap-2 rounded-lg border border-primary bg-transparent text-sm uppercase text-primary-foreground opacity-0 transition-all duration-300 ease-in-out group-hover:translate-x-[10px] group-hover:translate-y-[10px] group-hover:opacity-100",
+          "absolute top-0 flex items-center justify-center gap-2 border border-primary bg-transparent text-sm uppercase text-primary-foreground opacity-0 transition-all duration-300 ease-in-out group-hover:translate-x-[10px] group-hover:translate-y-[10px] group-hover:opacity-100",
           className
         )}
       />

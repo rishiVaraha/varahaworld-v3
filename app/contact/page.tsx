@@ -45,7 +45,7 @@ const Contact = () => {
 
   console.log(formData);
   return (
-    <div className="bg-background lg:min-h-screen border border-red-600">
+    <div className="bg-background relative z-10 lg:min-h-screen">
       <Wrapper className="my-4 flex min-h-screen flex-col gap-4 sm:my-8 lg:my-12 lg:min-h-0 lg:gap-10">
         <div>
           <h1 className="font-playfair text-sm md:text-base lg:text-xl">

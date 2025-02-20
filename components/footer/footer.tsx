@@ -58,7 +58,7 @@ export default function Footer() {
   return (
     <footer
       className={cn(
-        "sticky -bottom-full z-10 mt-4 md:mt-6 lg:-bottom-1/2 lg:mt-12",
+        "sticky -bottom-full mt-4 md:mt-6 lg:-bottom-1/2 lg:mt-12",
         pathnames?.includes("contact") && isMobile ? "hidden" : "block"
       )}
     >
@@ -79,7 +79,7 @@ export default function Footer() {
 
             <Link href="/contact">
               <AnimatedButton
-                className="flex h-10 w-[200px] items-center justify-center rounded-lg px-4 text-sm uppercase text-primary-foreground lg:h-12 lg:w-[260px]"
+                className="flex h-10 w-[200px] items-center justify-center px-4 text-sm uppercase text-primary-foreground lg:h-12 lg:w-[260px]"
                 // onClick={scrollToTop}
               >
                 Become a Partner
@@ -172,7 +172,7 @@ export default function Footer() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email address here"
-              className="h-9 flex-[1.5] rounded-lg border-b border-primary bg-background text-sm text-foreground sm:h-11 md:text-base"
+              className="h-9 flex-[1.5] border-b border-primary bg-background text-sm text-foreground sm:h-11 md:text-base"
             />
 
             {/* on hover border animation to right */}

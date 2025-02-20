@@ -36,15 +36,15 @@ export default function Why() {
           embracing the future.
         </p>
         <div className="flex flex-col items-center justify-between gap-8 child:text-base child:text-foreground/90 lg:flex-row lg:gap-4 child:lg:text-xl">
-          <div className="flex h-24 w-full items-center justify-center gap-4 space-x-4 border px-4 lg:h-32 lg:max-w-[485px] xl:space-x-10 xl:px-8">
+          <div className="flex h-24 w-full items-center justify-center gap-4 space-x-4 border-2 border-foreground px-4 lg:h-32 lg:max-w-[485px] xl:space-x-10 xl:px-8">
             <Icon1 className="size-20" />
             <p>Affordable solutions for heritage institutions </p>
           </div>
-          <div className="flex h-24 w-full items-center justify-center gap-4 space-x-4 border px-4 lg:h-32 lg:max-w-[485px] xl:space-x-10 xl:px-8">
+          <div className="flex h-24 w-full items-center justify-center gap-4 space-x-4 border-2 border-foreground  px-4 lg:h-32 lg:max-w-[485px] xl:space-x-10 xl:px-8">
             <Icon2 className="size-20" />
             <p>User-friendly technology for easy implementation </p>
           </div>
-          <div className="flex h-24 w-full items-center justify-center gap-4 space-x-4 border px-4 lg:h-32 lg:max-w-[485px] xl:space-x-10 xl:px-8">
+          <div className="flex h-24 w-full items-center justify-center gap-4 space-x-4 border-2 border-foreground  px-4 lg:h-32 lg:max-w-[485px] xl:space-x-10 xl:px-8">
             <Icon3 className="size-20" />
             <p>Scalable solutions to grow with your needs </p>
           </div>
@@ -66,15 +66,15 @@ export default function Why() {
         </p>
       </div>
       <div className="flex flex-col justify-between gap-8 child:text-base child:text-foreground/90 lg:flex-row lg:gap-4 child:lg:text-xl">
-        <div className="flex h-24 w-full items-center justify-center gap-4 space-x-4 border px-4 lg:h-32 lg:max-w-[485px] xl:space-x-10 xl:px-8">
+        <div className="flex h-24 w-full items-center justify-center gap-4 space-x-4 border-2 border-foreground  px-4 lg:h-32 lg:max-w-[485px] xl:space-x-10 xl:px-8">
           <Icon4 className="size-20" />
           <p>Increased accessibility to heritage for a wider audience </p>
         </div>
-        <div className="flex h-24 w-full items-center justify-center gap-4 space-x-4 border px-4 lg:h-32 lg:max-w-[485px] xl:space-x-10 xl:px-8">
+        <div className="flex h-24 w-full items-center justify-center gap-4 space-x-4 border-2 border-foreground  px-4 lg:h-32 lg:max-w-[485px] xl:space-x-10 xl:px-8">
           <Icon5 className="size-20" />
           <p>Enhanced visitor engagement and education </p>
         </div>
-        <div className="flex h-24 w-full items-center justify-center gap-4 space-x-4 border px-4 lg:h-32 lg:max-w-[485px] xl:space-x-10 xl:px-8">
+        <div className="flex h-24 w-full items-center justify-center gap-4 space-x-4 border-2 border-foreground  px-4 lg:h-32 lg:max-w-[485px] xl:space-x-10 xl:px-8">
           <Icon6 className="size-20" />
           <p>New revenue streams through online platforms </p>
         </div>

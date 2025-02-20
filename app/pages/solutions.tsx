@@ -4,7 +4,7 @@ import Digitize from "@/public/images/digitize.webp";
 import Virtualize from "@/public/images/virtualize.webp";
 import Monetize from "@/public/images/monetize.webp";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 export default function Solutions() {
   return (
@@ -43,15 +43,15 @@ export default function Solutions() {
           {/* Digitize */}
           <Link href="/digitize">
             <div className="group relative">
-              <div className="h-full w-full overflow-hidden">
+              <div className="relative lg:w-[485px] lg:h-[500px]">
                 <Image
                   className="object-cover opacity-55 transition-all duration-500 ease-in-out lg:opacity-100 lg:group-hover:scale-125
                 lg:group-hover:opacity-55"
                   src={Digitize}
                   alt="image"
-                  width={300}
-                  height={300}
+                  layout="fill"
                 />
+
                 {/* on hover translate to center with animation */}
                 <h2 className="absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center font-playfair text-[30px]  transition-all  duration-500 lg:bottom-10 lg:top-auto lg:group-hover:translate-y-[-185px] xl:text-[40px] xl:group-hover:translate-y-[-170px]">
                   Digitize
@@ -68,14 +68,13 @@ export default function Solutions() {
           {/* Virtualize */}
           <Link href={"/virtualize"}>
             <div className="group relative">
-              <div className="h-full w-full overflow-hidden ">
+              <div className="relative lg:w-[485px] lg:h-[500px]">
                 <Image
                   className="object-cover opacity-55 transition-all duration-500 ease-in-out lg:opacity-100 lg:group-hover:scale-125
                 lg:group-hover:opacity-55"
                   src={Virtualize}
                   alt="image"
-                  width={300}
-                  height={300}
+                  layout="fill"
                 />
                 {/* on hover translate to center with animation */}
                 <h2 className="absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center font-playfair text-[30px] transition-all duration-500  lg:bottom-10 lg:top-auto lg:group-hover:translate-y-[-150px] xl:text-[40px]">
@@ -90,14 +89,12 @@ export default function Solutions() {
             </div>
           </Link>
           <div className="group relative">
-            <div className="h-full w-full overflow-hidden ">
+            <div className="relative lg:w-[485px] lg:h-[500px]">
               <Image
                 className="object-cover opacity-55 transition-all duration-500 ease-in-out lg:opacity-100 lg:group-hover:scale-125
                 lg:group-hover:opacity-55"
                 src={Monetize}
                 alt="image"
-                width={300}
-                height={300}
               />
               {/* on hover translate to center with animation */}
               <h2 className="absolute bottom-10 left-0 right-0 top-0 flex items-center justify-center font-playfair text-[30px] transition-all duration-500  lg:top-auto lg:group-hover:translate-y-[-150px] xl:text-[40px]">
