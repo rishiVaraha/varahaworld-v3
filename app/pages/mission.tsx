@@ -1,6 +1,7 @@
 import Wrapper from "@/components/wrapper";
 
-// import Underline from "@/public/icons/underline.svg?img";
+import { ReactComponent as Underline } from "@/public/icons/underline.svg";
+
 import Trails from "@/public/images/trails.png";
 
 import Image from "next/legacy/image";
@@ -31,6 +32,7 @@ export default function Mission() {
               alt="red underline"
               layout="fill"
             /> */}
+            <Underline />
           </div>
         </div>
       </div>
