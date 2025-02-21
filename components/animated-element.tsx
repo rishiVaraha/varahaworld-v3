@@ -90,6 +90,10 @@ export const AnimatedElement: React.FC<AnimatedElementProps> = ({
     }
   }, [scrollPosition, controls, threshold]);
 
+  if (typeof window === "undefined") {
+    return null;
+  }
+
   return (
     <motion.div
       ref={ref}

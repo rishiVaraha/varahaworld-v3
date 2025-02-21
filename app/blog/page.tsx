@@ -25,7 +25,7 @@ export interface BlogProps {
 }
 
 export const metadata: Metadata = {
-  title: "Blogs | Varaha Heritage",
+  title: "Blogs",
   description: "Explore the world of heritage and culture through our blogs",
 };
 

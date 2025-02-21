@@ -56,7 +56,7 @@ export default function Hero() {
         </AnimatedElement>
 
         {/* blur div */}
-        <div className="absolute -bottom-52 -right-16 hidden h-96 w-[500px] gap-4 rounded-full bg-gradient-to-t from-[#4170DB] to-[#aae1fd63]  blur-3xl lg:flex" />
+        <div className="absolute -bottom-52 -right-16 hidden h-96 w-[500px] gap-4 rounded-full bg-gradient-to-t from-[#4170DB] to-[#aae1fd63] blur-3xl lg:flex" />
       </div>
 
       <AnimatedElement direction="zoom-in" animationDuration={0.3}>
