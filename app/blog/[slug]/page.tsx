@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import Image from "next/legacy/image";
 
+type Params = Promise<{ slug: string }>;
+
 async function fetchData(id: string | undefined) {
   const res = await fetch(`https://api.museumverse.net/api2/blog/${id}`, {
     next: { revalidate: 300 },
@@ -14,13 +16,12 @@ async function fetchData(id: string | undefined) {
   return data;
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string };
+export async function generateMetadata(props: {
+  params: Params;
 }): Promise<Metadata> {
-  const param = await params;
-  const id = await param.slug?.split("-").pop();
+  const params = await props.params;
+  const slug = params.slug;
+  const id = await slug?.split("-").pop();
 
   // fetch data
   const res = await fetch(`https://api.museumverse.net/api2/blog/${id}`, {
@@ -55,9 +56,10 @@ export async function generateMetadata({
   };
 }
 
-export default async function Page({ params }: { params: { slug: string } }) {
-  const param = await params;
-  const id = await param.slug?.split("-").pop();
+export default async function Page(props: { params: Params }) {
+  const params = await props.params;
+  const slug = params.slug;
+  const id = await slug?.split("-").pop();
   const blogData = await fetchData(id);
 
   const formatDate = (dateString: string | number | Date) => {
