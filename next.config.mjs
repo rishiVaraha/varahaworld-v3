@@ -9,5 +9,13 @@ export default {
 
     return config;
   },
-  images: {},
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "api.museumverse.net",
+        pathname: "**",
+      },
+    ],
+  },
 };
