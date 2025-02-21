@@ -43,13 +43,12 @@ export default function Solutions() {
           {/* Digitize */}
           <Link href="/digitize">
             <div className="group relative">
-              <div className="relative lg:w-[485px] lg:h-[500px]">
+              <div className="relative h-full w-full">
                 <Image
                   className="object-cover opacity-55 transition-all duration-500 ease-in-out lg:opacity-100 lg:group-hover:scale-125
                 lg:group-hover:opacity-55"
                   src={Digitize}
                   alt="image"
-                  layout="fill"
                 />
 
                 {/* on hover translate to center with animation */}
@@ -68,13 +67,12 @@ export default function Solutions() {
           {/* Virtualize */}
           <Link href={"/virtualize"}>
             <div className="group relative">
-              <div className="relative lg:w-[485px] lg:h-[500px]">
+              <div className="relative h-full w-full">
                 <Image
                   className="object-cover opacity-55 transition-all duration-500 ease-in-out lg:opacity-100 lg:group-hover:scale-125
                 lg:group-hover:opacity-55"
                   src={Virtualize}
                   alt="image"
-                  layout="fill"
                 />
                 {/* on hover translate to center with animation */}
                 <h2 className="absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center font-playfair text-[30px] transition-all duration-500  lg:bottom-10 lg:top-auto lg:group-hover:translate-y-[-150px] xl:text-[40px]">
@@ -89,7 +87,7 @@ export default function Solutions() {
             </div>
           </Link>
           <div className="group relative">
-            <div className="relative lg:w-[485px] lg:h-[500px]">
+            <div className="relative h-full w-full">
               <Image
                 className="object-cover opacity-55 transition-all duration-500 ease-in-out lg:opacity-100 lg:group-hover:scale-125
                 lg:group-hover:opacity-55"

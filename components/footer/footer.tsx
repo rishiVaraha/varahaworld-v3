@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 import { ReactComponent as ArrowForward } from "@/public/icons/arrow-forward.svg";
-import { ReactComponent as Logo } from "@/public/icons/logo.svg";
+import { ReactComponent as LogoFooter } from "@/public/icons/logo-footer.svg";
 import { SuccessToast, ErrorToast } from "@/components/custom/toast";
 import { BASE_URL } from "@/constant/site";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -207,7 +207,7 @@ export default function Footer() {
         </button>
       </div>
       <div className="ml-4 mr-8 flex flex-col-reverse justify-between gap-4 py-4 md:mr-24 lg:flex-row">
-        <Logo className="size-20 lg:size-32" />
+        <LogoFooter className="size-20 lg:size-32" />
         <div className="flex h-full w-full justify-between gap-4 child:font-normal lg:w-[600px] lg:child:font-bold">
           <p className="text-xs md:text-sm">
             Copyright ©{new Date().getFullYear()} All Right Reserved

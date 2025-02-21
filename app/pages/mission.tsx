@@ -4,7 +4,7 @@ import { ReactComponent as Underline } from "@/public/icons/underline.svg";
 
 import Trails from "@/public/images/trails.png";
 
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 export default function Mission() {
   return (
@@ -26,13 +26,7 @@ export default function Mission() {
           </h1>{" "}
           <div className="relative inline-block">
             <h1>Digital Preservation</h1>
-            {/* <Image
-              className="absolute bottom-0"
-              src={Underline}
-              alt="red underline"
-              layout="fill"
-            /> */}
-            <Underline />
+            <Underline className="absolute bottom-0 w-60 lg:96" />
           </div>
         </div>
       </div>
@@ -95,12 +89,11 @@ export default function Mission() {
           </div>
         </div>
         <div className="bord flex flex-col-reverse justify-between gap-8 xl:flex-row">
-          <div className="relative md:h-[500px] xl:h-[874px] xl:w-[600px] 2xl:w-[788px]">
+          <div className="relative h-hull w-full md:h-[500px] xl:h-[874px] xl:w-[600px] 2xl:w-[788px]">
             <Image
-              className="h-hull w-full object-contain"
+              className="size-full object-contain"
               src={Trails}
               alt="img"
-              layout="fill"
             />
           </div>
 
