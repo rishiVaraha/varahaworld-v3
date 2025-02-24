@@ -12,8 +12,6 @@ import Wrapper from "@/components/wrapper";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-// import { scrollToTop } from "@/lib/utils";
-
 interface NavLink {
   name: string;
   href: string;
@@ -21,12 +19,35 @@ interface NavLink {
 
 const Nav = ({ navLinks }: { navLinks: NavLink[] }) => {
   const pathname = usePathname();
+
+  if (typeof window === "undefined") return null;
+
+  const handleNavClick = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    event.preventDefault();
+    const targetElement = document.getElementById(href.replace("#", ""));
+    if (targetElement) {
+      const headerOffset = 80; // Adjust this value based on your header height
+      const elementPosition = targetElement.getBoundingClientRect().top;
+      const offsetPosition =
+        elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return navLinks.map(({ name, href }) => (
     <Link
       key={name}
       aria-label="nav-link"
       href={pathname !== "/" ? "/" : `/${href}`}
       className="text-sm uppercase tracking-wider hover:underline"
+      onClick={(event) => handleNavClick(event, href)}
     >
       {name}
     </Link>
