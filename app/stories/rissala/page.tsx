@@ -2,7 +2,7 @@ import StoriesHero from "@/components/stories-hero";
 import RissalaImg from "@/public/img/rissalaImg.png";
 import Collection1Img from "@/public/images/rissala/collection1.png";
 import Collection2Img from "@/public/images/rissala/collection2.png";
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 const Rissala = () => {
   return (
@@ -13,8 +13,8 @@ const Rissala = () => {
         className="bg-[url('/img/rissalaImg.png')]"
       />
       <div className="mx-4 my-6 flex flex-col gap-10 lg:mx-20 lg:my-20 lg:gap-20 2xl:mx-40">
-        <div className="flex flex-col items-center justify-between gap-10 lg:flex-row lg:items-start xl:gap-0">
-          <div className="flex flex-col gap-6 text-base lg:max-w-md lg:gap-16 lg:text-xl xl:max-w-lg 2xl:max-w-2xl">
+        <div className="flex flex-col items-center justify-between gap-10 lg:flex-row lg:items-start">
+          <div className="flex flex-col gap-6 text-base lg:gap-16 lg:text-xl flex-1">
             <p>
               Step into the world of Rissala Heritage, a private collection
               unlike any other. Here, history whispers through an extraordinary
@@ -63,9 +63,9 @@ const Rissala = () => {
             </div>
           </div>
 
-          <div>
+          <div className="relative flex-1 md:h-[500px] lg:h-[700px]">
             <Image
-              className="md:h-[500px] lg:h-[700px]"
+              className="size-full object-contain"
               src={Collection1Img}
               alt=""
             />
@@ -91,15 +91,15 @@ const Rissala = () => {
             <h3 className="text-lg font-bold lg:text-2xl">
               Sharing the Legacy:
             </h3>
-            <div className="flex flex-col justify-between gap-10 lg:flex-row lg:gap-20 2xl:gap-40">
-              <div>
+            <div className="flex flex-col justify-between gap-10 lg:flex-row ">
+              <div className="relative flex-1">
                 <Image
-                  className="size-full"
+                  className="object-contain lg:object-cover size-full"
                   src={Collection2Img}
                   alt="artifactIMG"
                 />
               </div>
-              <div className="max-w-lg text-base lg:text-xl xl:max-w-3xl">
+              <div className="flex-1">
                 <p className="pb-2">
                   Beyond digitization, Varaha Heritage is committed to raising
                   awareness about the Rissala Heritage collection. We believe

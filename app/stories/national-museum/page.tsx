@@ -4,7 +4,7 @@ import Work1Img from "@/public/images/national/work1.png";
 import Work2Img from "@/public/images/national/work2.png";
 import Work3Img from "@/public/images/national/work3.png";
 import Work4Img from "@/public/images/national/work4.png";
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 const NationalMuseum = () => {
   return (
@@ -55,27 +55,27 @@ const NationalMuseum = () => {
               </p>
             </div>
           </div>
-          <div>
+          <div className="relative w-full lg:h-[525px] lg:w-[698px]">
             <Image
-              className="md:h-[480px] lg:h-[525px]"
+              className="lg:object-right  object-contain size-full"
               src={Work1Img}
               alt="WorkImage"
             />
           </div>
         </div>
         <div className="flex flex-col-reverse items-center justify-between gap-6 lg:flex-row lg:gap-20 2xl:gap-40">
-          <div>
+          <div className="relative flex-1 lg:w-[634px] h-[475px]">
             <Image
-              className="md:h-[350px] lg:h-[475px]"
+              className="object-contain size-full"
               src={Work2Img}
               alt="workImage"
             />
           </div>
-          <div className="max-w-lg space-y-4 text-base lg:space-y-6 lg:text-xl xl:max-w-3xl">
+          <div className="flex-1 space-y-4 text-base lg:space-y-6 lg:text-xl ">
             <h3 className="text-lg font-bold lg:text-2xl">
               Photogrammetry: Charting a Course for Precision{" "}
             </h3>
-            <p>
+            <p className="text-xl">
               Varaha Heritage is taking a meticulous approach to preserving
               India&apos;s maritime legacy. Photogrammetry, a technique that
               creates detailed 3D models from photographs, will be used to
@@ -87,11 +87,11 @@ const NationalMuseum = () => {
         </div>
 
         <div className="flex flex-col items-center justify-between gap-6 lg:flex-row lg:gap-20 2xl:gap-40">
-          <div className="max-w-lg space-y-4 text-base lg:space-y-6 lg:text-xl xl:max-w-3xl">
+          <div className="space-y-4 text-base lg:space-y-6 lg:text-xl flex-1">
             <h3 className="text-lg font-bold lg:text-2xl">
               A New Dawn for Antiquity Reproduction
             </h3>
-            <p>
+            <p className="text-xl">
               The NMHC project isn&apos;t just about showcasing the past;
               it&apos;s about shaping the future. By leveraging 3D printing and
               other advanced technologies, Varaha Heritage is paving the way for
@@ -100,9 +100,9 @@ const NationalMuseum = () => {
               for India&apos;s maritime heritage.
             </p>
           </div>
-          <div>
+          <div className="relative flex-1 md:h-[360px] lg:h-[450px] lg:w-[337px]">
             <Image
-              className="md:h-[360px] lg:h-[450px]"
+              className="object-contain size-full"
               src={Work3Img}
               alt="workImage"
             />
@@ -110,14 +110,14 @@ const NationalMuseum = () => {
         </div>
 
         <div className="flex flex-col-reverse items-center justify-between gap-6 lg:flex-row lg:gap-20 2xl:gap-40">
-          <div>
+          <div className="relative flex-1 first-line:md:h-[350px] lg:h-[441px]">
             <Image
-              className=" md:h-[350px] lg:h-[441px]"
+              className="object-contain size-full"
               src={Work4Img}
               alt="workImage"
             />
           </div>
-          <div className="max-w-lg space-y-4 text-base lg:space-y-6 lg:text-xl xl:max-w-3xl">
+          <div className="flex-1 space-y-4 text-base lg:space-y-6 lg:text-xl">
             <h3 className="text-2xl font-bold">
               Technology and Heritage: A Perfect Harmony
             </h3>

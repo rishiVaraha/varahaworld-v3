@@ -11,14 +11,15 @@ interface StoriesHeroProps extends React.HTMLAttributes<HTMLDivElement> {
 const StoriesHero: React.ForwardRefExoticComponent<
   StoriesHeroProps & React.RefAttributes<HTMLDivElement>
 > = React.forwardRef<HTMLDivElement, StoriesHeroProps>(
-  ({ className, image, text }) => (
+  ({ className, image, text }, ref) => (
     <div
+      ref={ref}
       className={cn(
-        "relative  max-h-[40vh] w-full overflow-hidden bg-cover bg-no-repeat md:max-h-[60vh] lg:max-h-[80vh]",
+        "relative max-h-[40vh] w-full overflow-hidden bg-cover bg-no-repeat md:max-h-[60vh] lg:max-h-[80vh]",
         className
       )}
     >
-      <div className="flex items-center justify-center bg-black/50  backdrop-blur-xl">
+      <div className="flex items-center justify-center bg-black/50 backdrop-blur-xl">
         <Image className="opacity-70" src={image} alt="" />
       </div>
 
@@ -31,6 +32,6 @@ const StoriesHero: React.ForwardRefExoticComponent<
   )
 );
 
-StoriesHero.displayName = "Wrapper";
+StoriesHero.displayName = "StoriesHero";
 
 export default StoriesHero;

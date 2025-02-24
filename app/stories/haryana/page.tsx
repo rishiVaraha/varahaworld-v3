@@ -2,7 +2,7 @@ import StoriesHero from "@/components/stories-hero";
 import haryanaImg from "@/public/img/haryana.png";
 import ArtifactImg1 from "@/public/images/haryana/artifact1.png";
 import ArtifactImg2 from "@/public/images/haryana/artifact2.png";
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 const Haryana = () => {
   return (
@@ -14,8 +14,8 @@ const Haryana = () => {
       />
 
       <div className="mx-4 my-6 flex flex-col gap-10 lg:mx-20 lg:my-20 lg:gap-20 2xl:mx-40">
-        <div className="flex flex-col items-center justify-between gap-10 lg:flex-row lg:items-start xl:gap-0">
-          <div className="flex flex-col gap-6 text-base lg:max-w-md lg:gap-16 lg:text-xl xl:max-w-lg 2xl:max-w-2xl">
+        <div className="flex flex-col items-center justify-between gap-10 lg:flex-row lg:items-start">
+          <div className="flex flex-col gap-6 text-base flex-1 lg:gap-16 lg:text-xl">
             <div className="space-y-6">
               <p>
                 Haryana, the land of emperors and saints, sages and scholars,
@@ -50,12 +50,11 @@ const Haryana = () => {
               </p>
             </div>
           </div>
-          <div className="relative w-full h-full md:h-[500px] lg:h-[700px] border border-red-500">
+          <div className="relative flex-1 md:h-[500px] lg:h-[700px]">
             <Image
-              className="object-contain"
+              className="lg:object-right object-contain size-full"
               src={ArtifactImg1}
               alt="artifactIMG"
-              layout="fill"
             />
           </div>
         </div>
@@ -73,14 +72,14 @@ const Haryana = () => {
             </p>
           </div>
           <div className="flex flex-col justify-between gap-10 lg:flex-row lg:gap-20 2xl:gap-40">
-            <div>
+            <div className="relative flex-1">
               <Image
-                className="size-full"
+                className="object-contain size-full"
                 src={ArtifactImg2}
                 alt="artifactIMG"
               />
             </div>
-            <div className="max-w-lg text-base lg:text-xl xl:max-w-3xl">
+            <div className="text-base lg:text-xl flex-1">
               <h3 className="pb-6 text-lg font-bold lg:text-2xl">
                 The Benefits of 3D Digitization
               </h3>
