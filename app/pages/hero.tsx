@@ -34,7 +34,7 @@ export default function Hero() {
               possible, at scale.
             </p>
             <Link href="/contact">
-              <AnimatedButton className="flex h-10 w-[200px] items-center justify-center rounded-none px-4 text-sm uppercase text-primary-foreground lg:h-12 lg:w-[260px]">
+              <AnimatedButton className="flex h-10 w-[210px] items-center justify-center rounded-none px-4 text-sm uppercase text-primary-foreground lg:h-12 lg:w-[260px]">
                 Become a Partner
                 <ArrowForward />
               </AnimatedButton>
