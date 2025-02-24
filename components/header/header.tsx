@@ -26,9 +26,9 @@ const Nav = ({ navLinks }: { navLinks: NavLink[] }) => {
     event: React.MouseEvent<HTMLAnchorElement>,
     href: string
   ) => {
-    event.preventDefault();
     const targetElement = document.getElementById(href.replace("#", ""));
     if (targetElement) {
+      event.preventDefault();
       const headerOffset = 80; // Adjust this value based on your header height
       const elementPosition = targetElement.getBoundingClientRect().top;
       const offsetPosition =
