@@ -50,11 +50,12 @@ const Haryana = () => {
               </p>
             </div>
           </div>
-          <div>
+          <div className="relative w-full h-full md:h-[500px] lg:h-[700px] border border-red-500">
             <Image
-              className="md:h-[500px] lg:h-[700px]"
+              className="object-contain"
               src={ArtifactImg1}
               alt="artifactIMG"
+              layout="fill"
             />
           </div>
         </div>

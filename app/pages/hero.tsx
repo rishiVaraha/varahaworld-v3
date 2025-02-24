@@ -23,7 +23,7 @@ export default function Hero() {
               </h1>
               <div className="relative inline-block">
                 <h1>3D Technology</h1>
-                <Underline className="absolute w-52 bottom-0 ml-0 px-0 sm:ml-2 md:bottom-2 md:px-4 lg:ml-6 lg:px-0 lg:96" />
+                <Underline className="absolute w-52 bottom-0 ml-0 px-0 sm:ml-2 md:bottom-2 md:px-4 lg:ml-6 lg:px-0 lg:w-full" />
               </div>
             </div>
             <p className="max-w-[800px] text-foreground/90 lg:text-xl">

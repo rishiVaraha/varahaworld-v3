@@ -3,21 +3,6 @@
 import React, { useEffect, useRef } from "react";
 import { motion, useAnimation, Variant } from "framer-motion";
 
-const useScrollPosition = () => {
-  const [scrollPosition, setScrollPosition] = React.useState(0);
-
-  React.useEffect(() => {
-    const updatePosition = () => {
-      setScrollPosition(window.pageYOffset);
-    };
-    window.addEventListener("scroll", updatePosition);
-    updatePosition();
-    return () => window.removeEventListener("scroll", updatePosition);
-  }, []);
-
-  return scrollPosition;
-};
-
 const variants: Record<string, Variant> = {
   hidden: ({
     direction,
@@ -70,29 +55,25 @@ export const AnimatedElement: React.FC<AnimatedElementProps> = ({
 }) => {
   const controls = useAnimation();
   const ref = useRef<HTMLDivElement>(null);
-  const scrollPosition = useScrollPosition();
 
   useEffect(() => {
     const element = ref.current;
-    if (element) {
-      const elementTop = element.offsetTop;
-      const elementBottom = elementTop + element.clientHeight;
-      const viewportBottom = scrollPosition + window.innerHeight;
+    if (!element) return;
 
-      if (
-        elementTop < viewportBottom - element.clientHeight * threshold &&
-        elementBottom > scrollPosition + element.clientHeight * threshold
-      ) {
-        controls.start("visible");
-      } else {
-        controls.start("hidden");
-      }
-    }
-  }, [scrollPosition, controls, threshold]);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          controls.start("visible");
+        } else {
+          controls.start("hidden");
+        }
+      },
+      { threshold }
+    );
 
-  if (typeof window === "undefined") {
-    return null;
-  }
+    observer.observe(element);
+    return () => observer.unobserve(element);
+  }, [controls, threshold]);
 
   return (
     <motion.div
