@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://varahaheritage.com
+
+# Sitemaps
+Sitemap: https://varahaheritage.com/sitemap.xml

@@ -9,6 +9,15 @@ export default {
 
     return config;
   },
+
+  async rewrites() {
+    return [
+      {
+        source: "/sitemap.xml",
+        destination: "/sitemap-0.xml",
+      },
+    ];
+  },
   images: {
     remotePatterns: [
       {
