@@ -26,7 +26,7 @@ export default function Mission() {
           </h1>{" "}
           <div className="relative inline-block">
             <h1>Digital Preservation</h1>
-            <Underline className="absolute bottom-0 w-60 lg:96" />
+            <Underline className="absolute bottom-0 w-60 lg:w-full" />
           </div>
         </div>
       </div>
