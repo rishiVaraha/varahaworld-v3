@@ -40,8 +40,8 @@ export async function generateMetadata(props: {
     },
     openGraph: {
       type: "website",
-      url: `https://heritageverse.net/blog/${blog.uuid}`,
-      siteName: "Heritageverse",
+      url: `https://varahaheritage.com/blog/${blog.uuid}`,
+      siteName: "VarahaHeritage",
       title: blog.title,
       description: blog.title,
       images: [
